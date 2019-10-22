@@ -36,7 +36,7 @@ function startScreen() {
   textStyle(NORMAL);
   textSize(21)
   text('click to start', width / 2, height / 2 + 50);
-  text('made by Betty Deng', width / 2, height / 2 + 80)
+  text('This is a ball catching game made by Betty Deng', width / 2, height / 2 + 100)
   reset();
 }
 
