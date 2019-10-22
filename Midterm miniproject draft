@@ -3,11 +3,13 @@ var y = -20;
 var x = 200;
 var ballspeed = 3;
 var score = 0;
-var sound;
+var sound1;
+var sound2
 
 function preload() {
   soundFormats("wav");
-  sound = loadSound("ball.wav");
+  sound1 = loadSound("ball.wav");
+  sound2 = loadSound("oh no.wav");
 }
 
 function setup() {
@@ -40,6 +42,7 @@ function startScreen() {
 
 function gameOn() {
   background(242, 167, 102)
+  fill(255)
   textSize(30)
   text("score = " + score, width / 2, 50)
   noStroke()
@@ -49,10 +52,12 @@ function gameOn() {
   rect(mouseX, height - 10, 60, 40)
   y += ballspeed;
   if (y > height) {
+    sound2.setVolume(3)
+    sound2.play()
     screen = 2
   }
   if (y > height - 10 && x > mouseX - 20 && x < mouseX + 20) {
-    sound.play();
+    sound1.play();
     y = -20
     ballspeed += 0.5
     score += 1
@@ -72,8 +77,8 @@ function endScreen() {
   textAlign(CENTER);
   textStyle(BOLD);
   textSize(36)
-  text('GAME OVER', width / 2, height / 2 - 50)
-  text('NO!!!!!!!!!!!!!!!!!', width / 2, height / 2)
+  text('NO!!!!!!!!!!!!!!!!!!!!', width / 2, height / 2 - 50)
+  text('GAME OVER', width / 2, height / 2)
   textStyle(NORMAL);
   textSize(21)
   text("SCORE = " + score, width / 2, height / 2 + 50)
