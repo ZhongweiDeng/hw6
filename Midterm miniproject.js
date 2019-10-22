@@ -4,7 +4,7 @@ var x = 200;
 var ballspeed = 3;
 var score = 0;
 var sound1;
-var sound2
+var sound2;
 
 function preload() {
   soundFormats("wav");
@@ -32,7 +32,7 @@ function startScreen() {
   textAlign(CENTER);
   textStyle(BOLD);
   textSize(36)
-  text('CAN YOU CATCH THE BALL?!', width / 2, height / 2 - 40)
+  text('ARE YOU READY ?!', width / 2, height / 2 - 40)
   textStyle(NORMAL);
   textSize(21)
   text('click to start', width / 2, height / 2 + 50);
@@ -77,7 +77,7 @@ function endScreen() {
   textAlign(CENTER);
   textStyle(BOLD);
   textSize(36)
-  text('NO!!!!!!!!!!!!!!!!!!!!', width / 2, height / 2 - 50)
+  text('NO ！！！！！！！', width / 2, height / 2 - 50)
   text('GAME OVER', width / 2, height / 2)
   textStyle(NORMAL);
   textSize(21)
