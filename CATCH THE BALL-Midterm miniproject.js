@@ -1,5 +1,5 @@
 var screen = 0;
-var y = -20;
+var y = -25;
 var x = 200;
 var ballspeed = 3;
 var score = 0;
@@ -56,19 +56,19 @@ function gameOn() {
     sound2.play()
     screen = 2
   }
-  if (y > height - 10 && x > mouseX - 20 && x < mouseX + 20) {
+  if (y > height - 10 && x > mouseX - 25 && x < mouseX + 25) {
     sound1.play();
-    y = -20
+    y = -25
     ballspeed += 0.5
     score += 1
   }
-  if (y == -20) {
+  if (y == -25) {
     pickRandom();
   }
 }
 
 function pickRandom() {
-  x = random(20, width - 20)
+  x = random(25, width - 25)
 }
 
 function endScreen() {
@@ -96,5 +96,5 @@ function mousePressed() {
 function reset() {
   score = 0;
   ballspeed = 2;
-  y = -20;
+  y = -25;
 }
